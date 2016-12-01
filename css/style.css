@@ -1,4 +1,102 @@
 html, body{
 	margin: 0px;
 	padding: 0px;
+    width: 100%;
+}
+
+/*Navigation Panel*/
+.navWrapper{
+    background-color: #333;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    max-height: 50px;
+    box-sizing: border-box;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-bottom: 0px;
+}
+
+.footer{
+    position:fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #333;
+    color: #f2f2f2;
+    height: 40px;
+    text-align: center;
+}
+
+ul{
+    padding: 0px;
+}
+
+.navContent ul li{
+    display: inline-block;
+    margin-left: 30px;
+    list-style-type: none;
+}
+
+.navContent ul li a, #icon a {
+    color: #f2f2f2;
+    text-decoration: none;    
+}
+
+#icon{
+    display: none;
+}
+
+.separator{
+    display: none;
+    border-color: aqua;
+    width: 120%;
+    margin-left: -10%;
+}
+
+.selected{
+   border-bottom: 1px solid white;
+}
+
+.langshid{
+    display:none;
+}
+
+.flag {
+    width: 16px;
+    height: 11px;
+    margin-right: 6px;
+}
+
+
+/*Mobile view*/
+@media screen and (max-width:680px) {
+    /*Navigation panel*/
+    #icon, .separator{display: block;}
+    .navContent{display: none;}
+    
+    .navWrapper{
+        max-height: 500px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .navContent{
+        width: 100%;
+    }
+    
+    .navContent ul li{
+        display:list-item;
+        list-style-type: none;
+    }
+    
+    .responsive{
+        display:block;
+    }
+}
+/*For debuging */
+.debugBounds{
+    border: 1px solid red;
 }

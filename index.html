@@ -3,24 +3,49 @@
     <head>
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" href="css/style.css">    
-            
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link rel="stylesheet" href="css/style.css">  
+                
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-messages.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
         <script src="js/libs/jquery-3.1.1.min.js"></script>        
         <script src="js/viewRouter.js"></script>
         
         <title>JOVFinance</title>
     </head>
-    <body ng-app="jovfinance">
-
-        <a href="#/">JOVFinance</a>
-        <a href="#us">Meist</a>
-        <a href="#services">Teenused</a>
-        <a href="#price">Hinnakiri</a>
-        <a href="#contact">Kontakt</a>
-
+    <body ng-app="jovfinance" ng-controller="mainPage">
+        <header>
+            <div class="navWrapper">
+                <div class="logo">
+                    <a href="#/"><img id="logo" src="assets/jovfinance-logo.png" alt="JOVFinance Logo" height="30px" /></a>
+                </div>
+                <div id="icon">
+                    <a id="iconin" href="" ng-click="responsive()">&#9776</a>           
+                </div>
+                <div class="navContent">
+                    <ul>
+                        <hr class="separator">
+                        <li><a id="us" class="nav-item" href="#us">MEIST</a></li>
+                        <hr class="separator">
+                        <li><a id="services" class="nav-item" href="#services">TEENUSED</a></li>
+                        <hr class="separator">
+                        <li><a id="price" class="nav-item" href="#price">HINNAKIRI</a></li>
+                        <hr class="separator">
+                        <li><a id="contact" class="nav-item" href="#contact">KONTAKT</a></li>
+                        <hr class="separator">
+                        <li><a id="lang"><img class="flag" src="assets/{{activeLang}}.png" alt="Flags"></a><a class="langshid" ><img class="flag" src="assets/{{inactiveLang1}}.png" alt="Flags"></a><a class="langshid"><img class="flag" src="assets/{{inactiveLang2}}.png" alt="Flags"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
         <div ng-view></div>
+        <footer class="footer">
+            <p>© JOVFinance 2016</p>
+        </footer>
     </body>
 </html>
 
