@@ -8,7 +8,8 @@
             $scope.inactiveLang1 = "ru";   
             $scope.inactiveLang2 = "gb";   
             */
-        
+            
+            /*Header resizes*********************/
             var nW = $(".navWrapper");
             var nS = "navScrolled";
             var hdr = nW.height();
@@ -29,6 +30,19 @@
                     lc.removeClass("logoSmall");
                     li.removeClass("logoDown");
                     li.addClass("logoInit");
+                }
+            });
+        
+            /*Selected nav item*******/
+            $(".nav-item").click(function(){
+                var navIt = $(".nav-item");
+                var id = $(this.id);
+                var item = $(this);
+                if(!id.hasClass("itemSelected") && this.id != "logoa"){
+                    navIt.removeClass("itemSelected");
+                    item.addClass("itemSelected");
+                }else if(this.id == "logoa"){
+                    navIt.removeClass("itemSelected");
                 }
             });
         });
