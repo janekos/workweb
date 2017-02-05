@@ -13,38 +13,34 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.1/angular-material.min.js"></script>
         <script src="js/libs/jquery-3.1.1.min.js"></script>        
-        <script src="js/viewRouter.js"></script>
+        <script src="js/jovfinance.js"></script>
+        <script src="js/routerConfig.js"></script>
+        <script src="js/mainPage.js"></script>
         
         <title>JOVFinance</title>
     </head>
-    <body ng-app="jovfinance" ng-controller="mainPage">
+    <body ng-app="jovfinance" ng-controller="MainPage">
         <header>
             <div class="navWrapper">
                 <div class="logo">
-                    <a href="#/"><img id="logo" src="assets/jovfinance-logo.png" alt="JOVFinance Logo" height="30px" /></a>
+                    <a href="#/"><img id="logo" class="logoInit" src="assets/jov.png" alt="JOVFinance Logo" /></a>
                 </div>
-                <div id="icon">
-                    <a id="iconin" href="" ng-click="responsive()">&#9776</a>           
+                <div class="services">
+                    <a id="services" class="nav-item" href="#services">TEENUSED</a>
                 </div>
-                <div class="navContent">
-                    <ul>
-                        <hr class="separator">
-                        <li><a id="us" class="nav-item" href="#us">MEIST</a></li>
-                        <hr class="separator">
-                        <li><a id="services" class="nav-item" href="#services">TEENUSED</a></li>
-                        <hr class="separator">
-                        <li><a id="price" class="nav-item" href="#price">HINNAKIRI</a></li>
-                        <hr class="separator">
-                        <li><a id="contact" class="nav-item" href="#contact">KONTAKT</a></li>
-                        <hr class="separator">
-                        <li><a id="lang"><img class="flag" src="assets/{{activeLang}}.png" alt="Flags"></a><a class="langshid" ><img class="flag" src="assets/{{inactiveLang1}}.png" alt="Flags"></a><a class="langshid"><img class="flag" src="assets/{{inactiveLang2}}.png" alt="Flags"></a></li>
-                    </ul>
+                <div class="price">
+                    <a id="price" class="nav-item" href="#price">HINNAKIRI</a>
+                </div>
+                <div class="contact">
+                    <a id="contact" class="nav-item" href="#contact">KONTAKT</a>
                 </div>
             </div>
         </header>
-        <div ng-view></div>
-        <footer class="footer">
-            <p>© JOVFinance 2016</p>
+        <div id="mainView">
+            <div ng-view></div>
+        </div>        
+        <footer>
+<!--            <p>© JOVFinance 2016</p>-->
         </footer>
     </body>
 </html>

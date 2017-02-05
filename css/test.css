@@ -1,0 +1,123 @@
+md-nav-item{
+    margin-left: 10px;
+}
+
+.navWrapper{
+    background-color: #333;
+    height: 60px;
+}
+
+.navWrapper a{
+    color: #f2f2f2;
+    text-decoration: none;    
+}
+
+.navWrapper a:not(:first-child){
+    color: #f2f2f2;
+    text-decoration: none;
+    padding: 14px 16px;
+    margin-left: 20px;
+}
+
+.navWrapper a:not(:first-child):hover {background-color: #555;}
+
+.nav-item{
+    border-bottom: 1px solid #333;
+}
+
+.selected{
+   border-bottom: 1px solid white;
+}
+
+#icon{
+    display: none;
+    position: absolute;
+    right:8px;
+}
+
+@media screen and (max-width:680px) {
+    .navWrapper a:not(:first-child) {display: none;}
+    #icon{display: block;}
+    
+    .navWrapper.responsive:not(:first-child){
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /*.navWrapper.responsive #icon{
+        position: absolute;
+        right:5px;
+    }
+    .navWrapper.responsive #logo{
+        position: absolute;
+        top:5px;
+        left:5px;
+    }*/
+    
+    .navWrapper.responsive {position: relative;}
+    .navWrapper.responsive a {
+        float: none;
+        display: inline-block;
+    }
+}
+
+/*
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;    
+    line-height: 200%;
+    height: 60px;    
+}
+
+/*ul.topnav li {float: right;}
+
+ul.topnav li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.topnav li a:hover {background-color: #555;}
+
+ul.topnav li.icon {display: none;}
+
+ul.topnav li.icon a{
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    margin-top: 2px;
+    padding: 11px;
+}
+
+*/
