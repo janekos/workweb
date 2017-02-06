@@ -10,8 +10,19 @@ body{
     font-family: "Trebuchet MS";
 }
 
+.content{
+    position: relative;
+    min-height: 100%;
+}
+
 #mainView{
-    margin-bottom: 65px;
+    padding-bottom: 45px;
+}
+
+.om{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: -5%;
 }
 /*Navbar**************************************************/
 .navWrapper{
@@ -71,7 +82,7 @@ body{
 }
 
 /*Main Page***********************************************/
-.jumbotron{
+/*.jumbotron{
     position: relative;
     margin-top: 20px;
     width: 90%;
@@ -123,12 +134,44 @@ body{
     left: 25%;
     top: 25%;
     opacity: 0.9;
+}*/
+
+.greeting{
+    margin-top: 20px;
+}
+
+#greetingH1{
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+#greetingP{
+    font-size: 60px;
+    margin 0;
+    padding: 0;
+}
+
+.threesome{
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.threeitem{
+    width: 28%;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 /*Footer**************************************************/
-footer{
-    position: fixed;
-    bottom: 0px;
+.footer{
+    position: absolute;
+    bottom: 0;
     width: 100%;
     background-color: white;
     color: black;

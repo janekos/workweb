@@ -20,7 +20,7 @@
         <title>JOVFinance</title>
     </head>
     <body ng-app="jovfinance" ng-controller="MainPage">
-        <header>
+        <div class="content">        
             <div class="navWrapper">
                 <div class="logo">
                     <a href="#/" id="logoa" class="nav-item"><img id="logo" class="logoInit" src="assets/jov.png" alt="JOVFinance Logo" /></a>
@@ -34,14 +34,14 @@
                 <div class="contact">
                     <a id="contact" class="nav-item" href="#contact">KONTAKT</a>
                 </div>
+            </div>        
+            <div id="mainView">
+                <div ng-view></div>
+            </div>        
+            <div class="footer">
+                <p>© JOVFinance 2016</p>
             </div>
-        </header>
-        <div id="mainView">
-            <div ng-view></div>
-        </div>        
-        <footer style="visibility: hidden;">
-            <p>© JOVFinance 2016</p>
-        </footer>
+        </div>
     </body>
 </html>
 
