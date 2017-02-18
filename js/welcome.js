@@ -7,7 +7,7 @@
             var nW = $(".navWrapper");
             var hdr = nW.height();
             var jumb = $('.jumbotron');
-            var jumbH = winH-hdr;         
+            var jumbH = winH-hdr;
         
             /*Onload */
             $('.jumbotron').css({"height": jumbH+"px"});
