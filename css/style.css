@@ -82,19 +82,15 @@ body{
 }
 
 /*Main Page***********************************************/
-/*.jumbotron{
+.jumbotron{
     position: relative;
-    margin-top: 20px;
-    width: 90%;
-    height: 700px;
+    width: 100%;
+    height: 5px;
     background-image: url(../assets/jet.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 700px;
+    background-size: 100% 100%;
     background-position: center;
-    border-radius: 25px;
-    margin-left: 5%;
-    margin-right: -5%;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 .jumbNavs{
@@ -126,46 +122,39 @@ body{
 
 .floater{
     position: absolute;
-    padding: 10px;
-    background-color: gray;
-    color: white;
-    border-radius: 15px;
-    font-size: 60px;
-    left: 25%;
-    top: 25%;
-    opacity: 0.9;
-}*/
-
-.greeting{
-    margin-top: 20px;
+    padding: 20px;  
+    left: 10%;
+    top: 5%;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 5px;
 }
 
-#greetingH1{
-    font-size: 80px;
+.floater > p{
+    padding: 0;
     margin: 0;
-    padding: 0;
+    font-size: 120px;
+    font-family: "Courier New";
+    color: black; 
+    line-height: 130%;
 }
 
-#greetingP{
-    font-size: 60px;
-    margin 0;
-    padding: 0;
-}
-
-.threesome{
-    height: 60%;
+.foursome{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: lightgray;
 }
 
-.threeitem{
-    width: 28%;
-    padding-left: 30px;
-    padding-right: 30px;
+.fouritem{
     border-radius: 5px;
     border: 1px solid black;
+    width: 35%;
+    margin: 10px;
+    padding: 20px;
 }
 
 /*Footer**************************************************/
@@ -178,6 +167,104 @@ body{
     height: 45px;
     text-align: center;
     border-top: 1px solid black;
+}
+
+/*Tablet View**********************************************/
+@media screen and (max-width:1280px) {
+    /*Navbar***********************************************/
+    .navWrapper{
+        margin-bottom: 15px;
+    }
+
+    .navWrapper > div{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .navWrapper > div > a{
+        font-size: 20px;
+    }
+    
+    /*Logo*************************************************/
+    .logoInit{
+        height: 90px;
+    }
+
+    .logoDown{
+        height: 20px;
+    }
+    
+    /*main page********************************************/
+    .floater{
+        left: 10%;
+        top: 5%;
+        background-color: rgba(255,255,255,0.6);
+        border-radius: 5px;
+    }
+    
+    .floater > p{
+        padding: 0;
+        margin: 0;
+        font-size: 80px;
+        font-family: "Courier New";
+        color: black; 
+        line-height: 130%;
+    }
+}
+
+/*Phone View***********************************************/
+@media screen and (max-width:680px) {
+    /*whole page*******************************************/
+    html, body{
+        width: 92%;
+    }
+    
+    /*Navbar***********************************************/
+    .navWrapper{
+        margin-bottom: 10px;
+        max-width: 100%;
+    }
+
+    .navWrapper > div{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .navWrapper > div > a{
+        font-size: 20px;
+    }
+    
+    /*Logo*************************************************/
+    .logoInit{
+        height: 70px;
+    }
+
+    .logoDown{
+        height: 20px;
+    }
+    
+    .logoSmall{
+        width: auto;
+    }
+    
+    /*main page********************************************/
+    .jumbotron{
+        display: none;
+    }
+    
+    .threesome{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .threeitem{
+        width: 100%;
+        margin-top: 5%;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
 }
 
 /*For debuging*********************************************/

@@ -2,25 +2,28 @@
     'use strict';
 
     angular.module('jovfinance')    
-        .controller('MainPage', function($scope){
+        .controller('Main', function($scope, $location){
             /*
             $scope.activeLang = "ee";   
             $scope.inactiveLang1 = "ru";   
             $scope.inactiveLang2 = "gb";   
             */
             
-            /*Header resizes*********************/
+            /*Vars */
             var nW = $(".navWrapper");
             var nS = "navScrolled";
             var hdr = nW.height();
             var mV = $("#mainView");
             var li = $('#logo');
             var lc = $('.logo');
+            var currP = "main";
+            var path = $location.$$path;
         
+            /*Header resizes*********************/        
             mV.css({paddingTop: hdr +'px'});
             
             $(window).scroll(function() {
-                if( $(this).scrollTop() > hdr ) {
+                if( $(this).scrollTop() > hdr) {
                     nW.addClass(nS);
                     lc.addClass("logoSmall");
                     li.removeClass("logoInit");
